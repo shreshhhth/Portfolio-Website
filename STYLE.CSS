@@ -21,12 +21,16 @@ body {
     position: absolute;
 }
 
+#main{
+    width: 100%;
+    background-color: black;
+}
+
 .bounding {
     width: fit-content;
-    /*width should be as of the size of the content*/
-    /* background-color: red; */
     overflow: hidden;
 }
+
 
 .bounding .boundingelem {
     transform: translateY(100%);
@@ -173,16 +177,13 @@ body {
 
 .elem {
     position: relative;
-    /* this will show contents in the desired background*/
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-family: 'Kdam Thmor Pro', sans-serif;
-    border-top: 1px solid #888;
-    padding: 2vw 1vw;
+    width: 100%;
+    padding: 3.5vw 3vw;
     padding-right: 0;
-    opacity: 0.7;
-
+    border-top: 1px solid #888;
 }
 
 .elem h1 {
@@ -196,13 +197,12 @@ body {
 }
 
 .elem img {
+    opacity: 0;
+    pointer-events: none;
+    height: 140%;
     z-index: 999;
     position: absolute;
-    height: 140%;
-    /* will show image into specific size*/
-    display: none;
-    /* image is still there but not showing if we're not hovering on the text*/
-    pointer-events: none;
+    transform: translate(-50%, -50%);
 }
 
 #about {
@@ -239,6 +239,15 @@ body {
     font-family: 'Nunito', sans-serif;
     line-height: 1.5;
     margin-bottom: 23px;
+}
+#textabout a{
+    transition: background-color 0.5s ease;
+}
+
+#textabout a:hover{
+    background-color: white;
+    color: black;
+    font-size: 17px;
 }
 
 
